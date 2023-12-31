@@ -5,7 +5,7 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import openai
 
 # Load service account credentials
-SERVICE_ACCOUNT_FILE = 'jat1-409119-2d497e7fa06e.json'
+SERVICE_ACCOUNT_FILE = 'google_service.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
@@ -32,42 +32,11 @@ for sheet in sheets:
 
 
 
-# # Function to interact with OpenAI's GPT
-# def ask_openai(prompt):
-#     OPENAI_API_KEY = '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'
-#     response = requests.post(
-#         'https://api.openai.com/v1/engines/davinci/completions',
-#         headers={
-#             'Authorization': f'Bearer {OPENAI_API_KEY}',
-#             'Content-Type': 'application/json'
-#         },
-#         json={
-#             'prompt': prompt,
-#             'max_tokens': 50  # Adjust as necessary
-#         }
-#     )
-#     response_json = response.json()
-#     print(response_json)
 
-# def generate_text(email_body, max_length=50):
-#     prompt = "Email content: " + email_body + "\nwhich is the job psition in this email?"
-#     tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
-#     model = GPT2LMHeadModel.from_pretrained("gpt2")
-
-#     # Preprocess the prompt to take only the first 50 words
-#     words = prompt.split()[:50]  # Split the text and take the first 50 words
-#     truncated_prompt = ' '.join(words)
-
-#     inputs = tokenizer.encode(truncated_prompt, return_tensors='pt', max_length=1024, truncation=True)
-#     # print(f"Sending prompt to model: {prompt}")
-#     output = model.generate(inputs, max_length=max_length, num_return_sequences=1)
-#     generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
-#     print(f"Model generated: {generated_text}")
-#     return generated_text
 
 
 def generate_text_with_gpt3(prompt, max_tokens=100, engine="davinci"):
-    openai.api_key = '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'  # Replace with your actual API key
+    openai.api_key = 'API KEY'  # Replace with your actual API key
 
     try:
         response = openai.Completion.create(
@@ -80,31 +49,10 @@ def generate_text_with_gpt3(prompt, max_tokens=100, engine="davinci"):
         print(f"An error occurred: {e}")
         return None
 
-# Example usage
-prompt = "Translate the following English text to French: 'Hello, how are you?'"
-generated_text = generate_text_with_gpt3(prompt)
-print
-(generated_text)
-exit()
+
 from transformers import pipeline
 import re
 
-
-# def generate_text_with_gpt3(email_body, max_tokens=100, engine="davinci"):
-#     openai.api_key = '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'  # Replace with your actual API key
-#     truncated_email_body = ' '.join(email_body.split()[:50])
-#     prompt=f"Determine from email, which job title was appliaction submitted?\nEmail: {truncated_email_body}"
-#     print('Promet:',prompt)
-#     try:
-#         response = openai.Completion.create(
-#             engine=engine,
-#             prompt=prompt,
-#             max_tokens=max_tokens
-#         )
-#         return response.choices[0].text.strip()
-#     except Exception as e:
-#         print(f"An error occurred: {e}")
-#         return None
 
 
 
