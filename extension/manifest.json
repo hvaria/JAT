@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "My Extension",
+    "version": "1.0",
+    "description": "A brief description of your extension",
+    "icons": {
+        "48": "icon.png"
+    },
+
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+
+    "host_permissions": [
+        "http://localhost:5000/*"
+    ],
+
+    "permissions": [
+        "notifications"
+        // "http://localhost:5000/*"
+    ],
+
+    "background": {
+        "service_worker": "background.js"
+    }
+    
+    
+
+}

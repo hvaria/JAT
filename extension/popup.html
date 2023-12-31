@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> <!-- Ensure the charset is set to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Number Display</title>
+    <style>
+        /* Reset margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #app-number-box {
+            width: 250px;
+            height: auto; /* Changed to auto to accommodate variable content size */
+            padding: 10px;
+            border: 10px solid yellow;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between; /* This will space out the elements */
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
+            border-radius: 5px; /* Optional: rounds the corners of the box */
+        }
+
+        #random-quote {
+            margin-top: 10px; /* Adjust top margin as needed */
+            font-style: italic;
+            text-align: center; /* Center the quote */
+            font-size: 14px; /* Adjust font size as needed */
+            width: 90%; /* Set width to prevent overflow */
+        }
+
+        #app-header {
+            color: #b89114; /* Yellow font color for the header */
+            font-size: 18px;
+            margin-bottom: 10px; /* Space between the header and the number */
+        }
+
+        .number {
+            color: black;
+            font-size: 36px;
+        }
+    </style>
+
+    <script src="script.js"></script>
+    <script src="quotes.js"></script>
+
+
+
+
+
+</head>
+<body>
+    <div id="app-number-box">
+        <div id="app-header">Number of Applications</div> <!-- Header inside the yellow border -->
+        <div class="number">Loading...</div> <!-- Number inside the yellow border -->
+        <p id="random-quote">
+    </div>
+</body>
+</html>

@@ -8,11 +8,11 @@ import numpy as np
 
 
 
-SERVICE_ACCOUNT_FILE = 'C:/Users/hvaria/Documents/JAT/gpt_files/jat1-409119-2d497e7fa06e.json'
+SERVICE_ACCOUNT_FILE = 'google project api json file location'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
-SAMPLE_SPREADSHEET_ID = '1ej8my1niNJCtjTUouGi3L-1iq-jNbTmcUZT_kqK4rNI'
+SAMPLE_SPREADSHEET_ID = 'spreadsheet end point'
 # service = build('sheets', 'v4', credentials=creds)
 # spreadsheet = service.spreadsheets().get(spreadsheetId=SAMPLE_SPREADSHEET_ID).execute()
 
