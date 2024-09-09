@@ -5,6 +5,14 @@
 
 The **JAT Project** combines a Python web application with a browser extension to provide an integrated solution for data processing and automation. The project features a browser extension that interacts with user inputs and web content, and a Python-based backend for handling data preprocessing and analysis.
 
+## Streamlining Job Applications from Gmail
+This project automates the process of extracting job application information directly from your Gmail account and providing data analysis on it. By connecting to your Gmail account (via the Gmail API), the system automatically retrieves and processes emails related to job applications, allowing you to:
+
+Extract job application details (e.g., company names, dates applied, statuses, etc.).
+Perform analysis to track application statuses, deadlines, and responses.
+Visualize application trends and success rates over time.
+This helps streamline your job application workflow by keeping all relevant data in one place and providing actionable insights to improve your job search strategy.
+
 ## Features
 
 ### 1. **Web Application (`app.py`)**
