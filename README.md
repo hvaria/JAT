@@ -95,7 +95,7 @@ JAT-main/
 
 ## Contributing
 
-We welcome contributions! If you would like to improve this project, please:
+I welcome contributions! If you would like to improve this project, please:
 1. Fork the repository.
 2. Create a new branch.
 3. Submit a pull request with your changes.
